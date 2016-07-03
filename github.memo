@@ -1,0 +1,28 @@
+abogadoron:~/workspace $ cd ./HirotakeIto.github.io/
+abogadoron:~/workspace/HirotakeIto.github.io $ 
+abogadoron:~/workspace/HirotakeIto.github.io $ git init
+Initialized empty Git repository in /home/ubuntu/workspace/HirotakeIto.github.io/.git/
+abogadoron:~/workspace/HirotakeIto.github.io (master) $ git add 
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+abogadoron:~/workspace/HirotakeIto.github.io (master) $ git add .
+abogadoron:~/workspace/HirotakeIto.github.io (master) $ git add README.md
+fatal: pathspec 'README.md' did not match any files
+abogadoron:~/workspace/HirotakeIto.github.io (master) $ git commit -m "first commit"
+[master (root-commit) e934278] first commit
+ 2 files changed, 18 insertions(+)
+ create mode 100644 github.memo
+ create mode 100644 index.html
+abogadoron:~/workspace/HirotakeIto.github.io (master) $ git remote add origin https://github.com/HirotakeIto/portfolio_hirotake.git
+abogadoron:~/workspace/HirotakeIto.github.io (master) $ git push -u origin master
+Username for 'https://github.com': HirotakeIto
+Password for 'https://HirotakeIto@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 621 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/HirotakeIto/portfolio_hirotake.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+abogadoron:~/workspace/HirotakeIto.github.io (master) $ 
