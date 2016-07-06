@@ -1,0 +1,59 @@
+/* design all Document */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* design header */
+header{
+    background-image: url(haikei.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-attachment: scroll;
+}
+
+nav {
+  margin: 0 0 30px 0;
+  padding: 10px 0;
+  text-align: right;
+  background-image: none;
+}
+
+nav ul {
+  margin: 0 10px;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 15px 10px;
+  text-decoration: none;
+  color: #999;
+  font-weight: bold;
+}
+
+nav ul li a.selected {
+  color: #000;
+}
+
+div.my_image {
+    text-align: center;
+}
+
+div.my_image img {
+    size: portrait;
+    width: 150px 
+}
+
+div.my_image p {
+    font-style: normal;
+    display: block ;
+    font-size: larger;
+    font-weight: bold
+}
