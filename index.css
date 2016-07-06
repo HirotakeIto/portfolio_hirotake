@@ -5,9 +5,9 @@
   padding: 0;
 }
 
+
 /* design header */
 header{
-    background-image: url(haikei.png);
     background-position: center center;
     background-size: cover;
     background-repeat: repeat-x;
@@ -18,7 +18,6 @@ nav {
   margin: 0 0 30px 0;
   padding: 10px 0;
   text-align: right;
-  background-image: none;
 }
 
 nav ul {
@@ -56,4 +55,24 @@ div.my_image p {
     display: block ;
     font-size: larger;
     font-weight: bold
+}
+
+
+
+
+
+/*main_contents*/
+div.main_contents {
+    text-align: left;
+}
+div.main_contents h1{
+    border-bottom: 2px solid brown;
+    color:brown;
+}
+
+
+/*Works1*/
+div[id~='worksimg'] img{
+    width:50%;
+    height:50%;
 }
