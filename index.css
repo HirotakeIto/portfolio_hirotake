@@ -76,3 +76,11 @@ div[id~='worksimg'] img{
     width:50%;
     height:50%;
 }
+
+/*Contents*/
+p.contact_inner{
+  font-weight: bold
+}
+p.contact_outer{
+  font-weight: bold
+}
