@@ -72,7 +72,7 @@ div.main_contents h1{
 
 
 /*Works1*/
-div[id~='worksimg'] img{
+div.worksimg img{
     width:50%;
     height:50%;
 }
