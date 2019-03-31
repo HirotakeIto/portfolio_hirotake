@@ -18,27 +18,18 @@ layout: default
 2. [Ito, Hirotake and Tabata, Shin, 子どもの教育成果に対する学校施策の有効性の検証-時間変化する要因を考慮した分析- ](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3362177)
 3. (manuscript, Japanese)[日本の小学生における教員の効果とその性質について](./kinsler.pdf)
 
-## Typography
+## Works
+・（Proceeding）Package for estimate about peer fixed effect & teacher fixed effect
+https://github.com/HirotakeIto/peer_fixed_effect
 
-This is a [link](http://google.com). Something *italics* and something **bold**.
+## Education and Career
 
-Here is a table
+Year | Description
+-----|-------
+2014 | 一橋大学経済学学士取得
+2015 | 一橋大学経済学修士取得
+2015 | リスクマネジメント業務、マネージャー（資産運用会社）
+2017 | データアナリスト（ヘルスケア系コンサルティング会社）
 
-Year | Award | Category
------|-------|--------
-2014 | Emmy  | Won Outstanding Lead Actor in a miniseries or a movie
-2015 | BAFTA | Nominated for Best Leading Actor for Sherlock
-2014 | Satellite | Won Best Actor miniseries or television film
-
-Here is a horizontal rule
-
----
-
-Here is a blockquote
-
-> To a great mind, nothing is little
-
-## References
-
-* Foo Bar: Head of Department, Placeholder Names, Lorem
-* John Doe: Associate Professor, Department of Computer Science, Ipsum
+## Template
+This page is powered by [researcher template](https://github.com/ankitsultana/researcher)
