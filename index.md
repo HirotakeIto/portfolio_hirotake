@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## About Me
+## About Hirotake Ito
 
 <img class="profile-picture" src="sherlock.jpg">
 
