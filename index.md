@@ -4,20 +4,19 @@ layout: default
 
 ## About Hirotake Ito
 
-<img class="profile-picture" src="sherlock.jpg">
+<!-- <img class="profile-picture" src="sherlock.jpg"> -->
 
-Hi! I am a junior year student of B.E. Computer Science at Birla Institute of Technology and Science, Pilani.
+* Name: Hirotake Ito
+* Job: PhD Students(Keio University, Media and Governance), Data Analyst
+* Interest: Economics, Data Science, Sociology...
+* Skill: Python, Excel VBA, Ruby
 
-This is a jekyll based resume template. You can find the full source code on [GitHub](https://github.com/bk2dcradle/researcher)
 
-## Research Interest
+## Paper
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus ipsum ac erat aliquam dapibus. Vestibulum vehicula placerat ex, a consectetur odio pharetra quis. Mauris id urna ante. Fusce pharetra diam ac nisi aliquet, vel egestas ex iaculis. Pellentesque laoreet cursus tellus sed pellentesque. Praesent a rhoncus elit. Nunc ipsum nisl, consequat sit amet pretium quis, gravida id ipsum.
-
-## Publications
-
-1. F.Bar, J.Doe: Effects of having a placeholder of a name
-2. S.Holmes, J.Watson: Consequences of living with a sociopath in London
+1. Ito, H., Nakamuro, M., & Yamaguchi, S. (2019). Effects of Class-Size Reduction on Cognitive and Non-cognitive Skills. Available at SSRN.
+2. [Ito, Hirotake and Tabata, Shin, 子どもの教育成果に対する学校施策の有効性の検証-時間変化する要因を考慮した分析- ](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3362177)
+3. (manuscript, Japanese)[日本の小学生における教員の効果とその性質について](./kinsler.pdf)
 
 ## Typography
 
