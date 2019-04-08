@@ -32,8 +32,10 @@ sass:
 
 nav:
  - name: "About"
-   link: "."
+   link: / # root
  - name: "Resume"
-   link: "resume.pdf"
+   link: /resume.pdf
  - name: "Contact"
-   link: "contact"
+   link: /contact
+ - name: "Memo"
+   link: /memo
