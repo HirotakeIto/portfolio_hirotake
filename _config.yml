@@ -1,9 +1,16 @@
+# https://jekyllrb.com/docs/configuration/default/
+
 remote_theme: ankitsultana/researcher@gem
 title: Hirotake Ito Profile
 url: "https://hirotakeito.github.io"
-baseurl: "."
+baseurl: "." # localでサーバーを立ち上げる時はコメントアウト.https://github.com/jekyll/jekyll/issues/1432
 
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 #ins_logo: "./bits-logo.png"
 
 tracking_id: #
