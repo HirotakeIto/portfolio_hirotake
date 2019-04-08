@@ -1,12 +1,15 @@
 # https://jekyllrb.com/docs/configuration/default/
 # Where things are
 
-includes_dir        : _blogs
+collections:
+  blogs:
+    output          : true
 
 remote_theme: ankitsultana/researcher@gem
 title: Hirotake Ito Profile
-url: "https://hirotakeito.github.io"
+url: "https://HirotakeIto.github.io"
 # baseurl: "HirotakeIto.github.io" # localでサーバーを立ち上げる時はコメントアウト.https://github.com/jekyll/jekyll/issues/1432
+baseurl: 
 
 markdown: kramdown
 highlighter: rouge
