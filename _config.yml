@@ -3,7 +3,7 @@
 remote_theme: ankitsultana/researcher@gem
 title: Hirotake Ito Profile
 url: "https://hirotakeito.github.io"
-baseurl: "." # localでサーバーを立ち上げる時はコメントアウト.https://github.com/jekyll/jekyll/issues/1432
+baseurl: "HirotakeIto.github.io" # localでサーバーを立ち上げる時はコメントアウト.https://github.com/jekyll/jekyll/issues/1432
 
 markdown: kramdown
 highlighter: rouge
