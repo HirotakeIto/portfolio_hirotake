@@ -31,5 +31,5 @@ Year | Description
 2015 | リスクマネジメント業務、マネージャー（資産運用会社）
 2017 | データアナリスト（ヘルスケア系コンサルティング会社）
 
-## Template
+
 This page is powered by [researcher template](https://github.com/ankitsultana/researcher)

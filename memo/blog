@@ -1,0 +1,37 @@
+20190408内容
+  * ジキルのホームページに従って、さっとセットアップ
+    bundle install 
+    Gemfile作成など
+
+  * researcherテンプレにはコードスニペットがなかったので追加したかった。
+    → rougeを使う。ただしこれはcss/syntax.cssを作ってくれるっていうだけなので、これをindex.htmlでインクルード
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css" >
+
+    highlighter: rouge
+    kramdown:
+      input: GFM
+      hard_wrap: false
+      syntax_highlighter: rouge
+    ↑ これいるのかな。。。？
+
+    ついでに、syntax.cssを一箇所だけ手直し。→ コードが横に溢れたら、スクロールできる様にする
+
+    .highlight {
+      background-color: #f8f8f8;
+    }
+    ↓
+    .highlight {
+      background-color: #f8f8f8;
+      overflow-x: scroll;
+    }
+
+
+メモ：
+ブログを作りたい
+→ blog投稿用にそのリソースを作んなきゃいけないっぽい
+collection_dirsとかの設定をいじればいけた。
+あとカテゴリの導入とかは次みたいにやればいけると思う
+https://blog.webjeda.com/jekyll-categories/
+
+
