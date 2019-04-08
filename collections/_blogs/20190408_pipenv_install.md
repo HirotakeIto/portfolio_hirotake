@@ -1,5 +1,8 @@
 ---
 layout: default
+title: Pipenv導入
+date_post: 20190408
+tags: tech
 ---
 
 # Pipenv導入
