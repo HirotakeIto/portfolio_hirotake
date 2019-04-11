@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Pipenv導入
+title: pipenv導入
 date_post: 20190408
 tags: tech
 ---
 
-# Pipenv導入
+# pipenv導入
 
 ## Install
 
