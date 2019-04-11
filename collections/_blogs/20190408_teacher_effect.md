@@ -19,9 +19,9 @@ MathJax.Hub.Config({
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
 
 # 教員の効果
-教員が生徒の教育成果に持つ影響について考える。
+教員が生徒の教育成果に持つ影響について考えた論文をまとめる。例によって論文読んだ時のメモとして残しており、校正などは一切おこなっていないことをご了承ください。
 
-### 教員免許など
+## 教員免許など
 教員の有効性と教員免許はどの様な関係にあるのだろうか。教員の質保証政策の一貫で教員免許の取得を厳しくすることなどが政策ターゲットになることなどがあるが、そもそも教員として資格を取得することが果たして教員としての質を高めるなんていうことはあるのか？
 
 * 小学校 Clotfelter,Ladd, and Vigdor 2006, 2007a, 2007b; Goldhaber and Anthony 2007; Rockoff 2004)
@@ -32,9 +32,11 @@ MathJax.Hub.Config({
   * High Credentialsな先生はSESが高い生徒が集まる学校に配分されていて、不公平かも
   * これは単年度のデータしかないんだけど、科目間の生徒の固定効果をコントロールすることでcausal effectを取り出そうとしている。
 
+* Monazza Aslam∗, Geeta Kingdon
+教員固定効果
 
-
-### 教員効果の測定について
+## 教員付加価値
+### 教員付加価値を用いた教員効果の測定について
 教員の効果を測定する手法として、非常に頻繁に用いられるのは教員付加価値である。これは教育生産関数のインプットというより、むしろアウトプットを評価しているという点に注意しなくちゃいけない。一般に教員能力といえば子供の人的資本を促進するものだと考えるが、ここではその結果である。そのため、この教員効果がインプットにもなりうるという点は別で評価する必要がある。
 
 多くの場合教員効果を推定するときは、次の様なモデル化を行う（Jackson, Rockoff & Staiger(2014)に従っているが、文中での意図と数式が違うと思うで勝手に直している。）。
@@ -108,28 +110,28 @@ s_{jt} &=& \frac{\sum_{i, i \in I_{jt}} s_{ijt}}{\|I_{jt}\|} \\
 
 という教員効果$\theta _ {j}$についてのシグナルを毎期受け取ると考えることができる。
 
-もし教員効果$\theta _ {j}$に対するpriorが期待値0及び分散$var(\theta)$であり、上記シグナルをt期分受け取ると上記のsignal extraction定理より(そのシグナルの集合を$s_j = \\{s_{jt} \| t \in T \\}$と書くことにする)、
+もし教員効果$\theta _ {j}$に対するpriorが期待値0及び分散$V(\theta)$であり、上記シグナルをt期分受け取ると上記のsignal extraction定理より(そのシグナルの集合を$s_j = \\{s_{jt} \| t \in T \\}$と書くことにする)、
 
 \begin{eqnarray}
-   E(\theta | s_j ) &=& \sum_{t, t \in T} s_{jt} \frac{ \frac{1}{var(v_{jt})} }{ \frac{1}{var(\theta)} + \frac{1}{\sum_{t, t \in T} var(v_{jt})} }
+   E(\theta | s_j ) &=& \sum_{t, t \in T} s_{jt} \frac{ \frac{1}{V(v_{jt})} }{ \frac{1}{V(\theta)} + \sum_{t, t \in T}\frac{1}{ V(v_{jt})} }
 \end{eqnarray}
 
 と教員jの効果$\theta$の期待値を書くことができる。
 
-多くの場合は得られたデータから、$var(\theta)$や$var(v_{jt})$を無理やり（？）計算して妥当性の高いpriorを構成した後、期待値を計算することが多い。
+多くの場合は得られたデータから、$V(\theta)$や$V(v_{jt})$を無理やり（？）計算して妥当性の高いpriorを構成した後、期待値を計算することが多い。
 
 ###### Lefgren&Sims(2012)でのさらなる縮約
 さらに、Lefgren&Sims(2012)などはシグナルをさらに集約して、
 \begin{eqnarray}
 s_{j} = \theta _ {j} + \frac{\sum_{t, t \in T} v_{jt}}{\|T\|}
 \end{eqnarray}
-と書いて、$var(\frac{\sum_{t, t \in T} v_{jt}}{|T|}) = \frac{var(v_j)}{|T|}$と書くことで($var(v_j)$というものをどっかから調達してくるということ)、
+と書いて、$V(\frac{\sum_{t, t \in T} v_{jt}}{|T|}) = \frac{V(v_j)}{|T|}$と書くことで($V(v_j)$というものをどっかから調達してくるということ)、
 
 $$ 
 \begin{eqnarray}
    E(\theta | s_j ) 
-   &=& s_{j} \times \frac{ \frac{1}{\frac{var(v_j)}{|T|}}}{ \frac{1}{var(\theta)} + \frac{1}{\frac{var(v_j)}{|T|}} } \\
-   &=& s_{j} \times \frac{var(\theta)}{var(\theta) + \frac{var(v_j)}{|T|}}
+   &=& s_{j} \times \frac{ \frac{1}{\frac{V(v_j)}{|T|}}}{ \frac{1}{V(\theta)} + \frac{1}{\frac{V(v_j)}{|T|}} } \\
+   &=& s_{j} \times \frac{V(\theta)}{V(\theta) + \frac{V(v_j)}{|T|}}
 \end{eqnarray}
 $$ 
 
@@ -143,24 +145,48 @@ $$
 
 * Kane, T. J., & Staiger, D. O. (2008). Estimating teacher impacts on student achievement: An experimental evaluation (No. w14607). National Bureau of Economic Research.
 
-* Chetty R, Friedman JN, Rockoff JE. 2013a. Measuring the impacts of teachers I: evaluating bias in teacher value-added estimates. NBER Work. Pap. 19423
-
 * Lefgren, L., & Sims, D. (2012). Using subject test scores efficiently to predict teacher value-added. Educational Evaluation and Policy Analysis, 34(1), 109-121.
   個人的には一番丁寧かつ、subject別ではない取り出しみたいな取り組みをしていて面白かった。
+
+* Chetty R, Friedman JN, Rockoff JE. 2013a. Measuring the impacts of teachers I: evaluating bias in teacher value-added estimates. NBER Work. Pap. 19423
+  * 上記の定式化では教員効果を時間を通じて一定としていた。しかしそれはあまりに単純化にすぎるのではないか、ということで時間変動する教員効果を取り出している。教員効果がautocovarianceするような設定にして、直近のテストスコアが教員効果をより強く構成するようなモデルを組んだ。
+  * 教員効果の1SDの上昇は0.14もの効果を持つ。
+  > Our VA model implies that a 1 standard deviation (SD) improvement in teacher VA raises normalized test scores by approximately 0.14 SD in math and 0.1 SD in English, slightly larger than the estimates in prior studies which do not account for drift.
+  * 教員効果がcausalかどうかを考えるために実験を行なった。推定した教員効果を用いたVAを用いた予測がどれくらいforecast errorを出すかを検討することで、causalityを検証した
+  * ほか、event studyなどを行なって、良い教員が入った学校や出て行った学校のテストスコアが落ちることなどを確認した。
+
 
 * Jackson, C. K., Rockoff, J. E., & Staiger, D. O. (2014). Teacher effects and teacher-related policies. Annu. Rev. Econ., 6(1), 801-825.
 
 良いサーベイ。
 
-* ECONOMETRIC METHODS OF SIGNAL EXTRACTION by D.S.G. POLLOCK
-シグナル抽出に関するサーベイ
+
+### 教員付加価値は教員の価値を表現し得ているのか？
+chetty(2013, a)によれば教員付加価値に本質的な意味があるか否かという立場には次の観点があるとしている。すなわち、
+1. 過去のデータから得られたに過ぎない教員付加価値は本当に教員のcausal impactを表しているのか？
+すなわち上記推定式の仮定は成り立たず、教員と生徒間のsortingを反映しているだけではないのか。
+2. テストスコアを上昇させるのが得意な教員を見つけているだけでは？
+学力についての教員効果はテストスコアを伸ばしているに過ぎず、真に重要なアウトプットに対して効果はなかったのではないのか？
+
+という問題を抱えている。chetty論文がすごいのはこの2つに同時に解決を与えた研究を行ったというところで、正直、これら２つはすでにクリアされている。
+
+* Rothstein 2010
+
+#### 表現できているとしている立場
+* Gordon, Kane, and Staiger 2006
+* Hanushek 2009
+
+#### 表現できていない立場
+* Baker et al. 2010
+* Corcoran 2010
 
 
+### その他
+* Can Principals Identify Effective Teachers? Evidence on Subjective Performance Evaluation
+上司による評価は本当に当てになるのか？
 
-それで教員の評価をするときは多くは次の式を推定する。
-  * We observe teachers with a finite number of classrooms and students, and estimates of teacher effects will therefore contain estimation error. Researchers typically use an empirical Bayes ap- proach to incorporate this into teacher effect estimates (see Kane & Staiger 2008, Chetty et al. 2013a). 
-
-  THE FAILURE OF INPUT-BASED SCHOOLING POLICIES
-
-
-
+* 自分用メモ：
+  * 戸田市の進学データとかを用いて、教員のその後の影響を調べる。
+  * クラスルームエフェクトを推定するために、日本の中学校のデータを用いればいいんじゃないの？用は中学校の教員は複数箇所に配分されているんだから、、、\\
+  → これで教員効果の年変動を計測できるのでは？ \\
+  → サンプルが少なすぎる問題は複数科目を同時に打ち込むことで解決できるような。。。
