@@ -21,6 +21,30 @@ MathJax.Hub.Config({
 # 教員の効果
 教員が生徒の教育成果に持つ影響について考えた論文をまとめる。例によって論文読んだ時のメモとして残しており、校正などは一切おこなっていないことをご了承ください。
 
+
+<!-- ##### 回帰分析における説明割合
+https://stats.stackexchange.com/questions/203540/explaining-the-variance-of-a-regression-model -->
+
+## 教授方法の影響
+* Algan, Yann, Pierre Cahuc, and Andrei Shleifer. 2013.   “Teaching   Practices   and   Social   Capital.”   American Economic Journal: Applied Economics 5(3): 189–210
+  <!-- * 何でこんないいジャーナルに載っているんだ？ -->
+  * 学校での指導方法が生徒の信念（協力への志向性みたいなもの）に影響をあたえる
+  * 基本的な推定はOLSに学校固定効果などを追加するだけのもの
+
+* Bietenbeck, J. (2014). Teaching practices and cognitive skills. Labour Economics, 30, 143-153.
+  * within-student between-subject approach
+
+* Hidalgo-Cabrillana, A., & Lopez-Mayan, C. (2018). Teaching styles and achievement: Student and teacher perspectives. Economics of Education Review, 67, 184-206.
+  * within-student between-subject approach 
+
+* Schwerdt, G., & Wuppermann, A. C. (2011). Is traditional teaching really all that bad? A within-student between-subject approach. Economics of Education Review, 30(2), 365-379.
+  * 
+
+* Van Klaveren, C. (2011). Lecturing style teaching and student performance. Economics of Education Review, 30(4), 729-739.
+  * 教員が教室の前で立って講義している時間と、パーソナルに教えている時間とどっちが有効かを比較。
+  * 教員が教室の前で立って講義している時間は特に学力に影響は与えなかった。
+  * within-student between-subject approach 
+
 ## 教員免許など
 教員の有効性と教員免許はどの様な関係にあるのだろうか。教員の質保証政策の一貫で教員免許の取得を厳しくすることなどが政策ターゲットになることなどがあるが、そもそも教員として資格を取得することが果たして教員としての質を高めるなんていうことはあるのか？
 
@@ -68,7 +92,7 @@ $\theta$についてのpriorとして
 $$
 \begin{eqnarray}
   x_i &=& \theta + \epsilon_i \\\\
-   where && \\
+  && where  \\
   \epsilon_i &\sim& N(0, 1/\rho_i ) \\
   Cov(\epsilon_i, \epsilon_j) &=& 0 (i \neq j)
 \end{eqnarray}
@@ -81,7 +105,7 @@ $$
    E(\theta | X) &=& \frac{\rho}{\rho ^ { \prime }} m 
     + \sum _ { i = 1, i \in I} \frac{\rho_i}{\rho ^ { \prime }} x _ { i } \\ 
    V(\theta | X) &=& 1 / \rho ^ { \prime }  \\
-   where && \\
+   && where \\
    \rho ^ { \prime } &=& \rho + \sum _ { i = 1, i \in I}  \rho _ { i } 
 \end{eqnarray}
 $$
@@ -123,15 +147,15 @@ s_{jt} &=& \frac{\sum_{i, i \in I_{jt}} s_{ijt}}{\|I_{jt}\|} \\
 ###### Lefgren&Sims(2012)でのさらなる縮約
 さらに、Lefgren&Sims(2012)などはシグナルをさらに集約して、
 \begin{eqnarray}
-s_{j} = \theta _ {j} + \frac{\sum_{t, t \in T} v_{jt}}{\|T\|}
+s_{j} = \theta _ {j} + \frac{\sum_{t, t \in T} v_{jt}}{ \|\| T \|\| }
 \end{eqnarray}
-と書いて、$V(\frac{\sum_{t, t \in T} v_{jt}}{|T|}) = \frac{V(v_j)}{|T|}$と書くことで($V(v_j)$というものをどっかから調達してくるということ)、
+と書いて、$V(\frac{\sum_{t, t \in T} v_{jt}}{\|T\|}) = \frac{V(v_j)}{\|T\|}$と書くことで($V(v_j)$というものをどっかから調達してくるということ)、
 
 $$ 
 \begin{eqnarray}
    E(\theta | s_j ) 
-   &=& s_{j} \times \frac{ \frac{1}{\frac{V(v_j)}{|T|}}}{ \frac{1}{V(\theta)} + \frac{1}{\frac{V(v_j)}{|T|}} } \\
-   &=& s_{j} \times \frac{V(\theta)}{V(\theta) + \frac{V(v_j)}{|T|}}
+   &=& s_{j} \times \frac{ \frac{1}{\frac{V(v_j)}{\|T\|}}}{ \frac{1}{V(\theta)} + \frac{1}{\frac{V(v_j)}{\|T\|}} } \\
+   &=& s_{j} \times \frac{V(\theta)}{V(\theta) + \frac{V(v_j)}{\|T \|}}
 \end{eqnarray}
 $$ 
 
@@ -180,8 +204,44 @@ chetty(2013, a)によれば教員付加価値に本質的な意味があるか�
 * Baker et al. 2010
 * Corcoran 2010
 
+## 学校の影響
+* Woessmann, L. (2016). The importance of school systems: Evidence from international differences in student achievement. Journal of Economic Perspectives, 30(3), 3-32.
+  * 学校の影響について広範に見たサーベイ \\
+    * 国際比較した時の教育生産関数を観察する。単純に推定した係数を見ている時と、国レベルに集計して説明割合(accounted variance)を観察して、家庭環境や学校制度の重要性を指摘する一方で、学校のリソースは重要ではないとしている \\
+    （ただこれ別に国レベルにしているから、学校制度がほぼ国を言い当てているだけでは？と思ったりする。）
+    * Woessmann (2003b, 2005b), Fuchs and Woessmann (2007), and Woessmann et al. (2009). などの類似研究がある。
+    * この指摘は少し面白い
+      > While most of the international achievement datasets are cross-sectional, Singh (2015) uses a longitudinal dataset that observes individual students at ages 5 and 8 in four developing countries. The findings show that the large cross-country learning gaps between low-performing Peru and high-performing Vietnam (apparent earlier in Table 1) are virtually nonexistent at school-entry age.
 
-### その他
+      学校入学時には国際的なレベルでの学力差はないらしい。
+    * Instruction Timeに関する研究 \\
+      指導時間は重要な影響を持っているという指摘。Lavy（2015, within-student between-subject identification), Rivkin and Schiman (2015, within-student between-subject identification) ...またこの辺の研究はbetween subjectを利用しているものが多いのも特徴。 Andrietti (2015)はDIDを用いている。
+      Schneeweis(2011)や Ammermueller(2013) などはInstruction TimeがSESによるacievment gapを埋める役割もあると指摘。
+    * 教員の「質」 \\
+      教員の質とはなんぞや、ということであるがいくつか検討されてきている。
+        * 教員の学力、リテラシー：Hanushek,  Piopiunik, and Wiederhold (2014) 、Bietenbeck, Piopiunik, and Wiederhold (2015, a within-student between-subject approach)
+        * 教員のサラリー：Dolton and Marcenaro-Gutierrez (2011) 
+        * teaching practice: Schwerdt and Wuppermann(2011, within-student between-subject identification ),　Bietenbeck(2014, within-student between-subject identification) , Algan, Cahuc, and Shleifer (2013, cross-sectional model with school fixed effect、AEJ) \\
+        これらはmodernなteachingとtraditionalなteachingを分ける傾向があって、traditionalなteachingなテストの成績や事実把握などへの効果を持つのに対して、modernなteachingは論理的思考やセルフコンフィデンスなどに良い影響を持つ可能性を示唆している。
+    * School Systems:
+      * External Exams: Hanushek and Woessmann(2011a, cross section), Jürges, Schneider, and Büchel (2005, DID),  Lüdemann (2011, DID)
+      * School Autonomy: Hanushek, Link, and Woessmann (2013), 
+      * Private Competition: West and Woessmann (2010, exogenous variation in the share of private schools across countries)
+      * Tracking: Hanushek and Woessmann (2006), Ammermueller (2013), Piopiunik  (2014) 
+
+
+* Ammermueller,    Andreas,    and    Jörn-Steffen    Pischke. 2009.  “Peer  Effects  in  European  Primary  Schools:  Evidence  from  the  Progress  in  Interna-tional  Reading  Literacy  Study.”  Journal  of  Labor  Economics 27(3): 315–48.
+
+* Freeman, R. B., & Viarengo, M. (2014). School and family effects on educational outcomes across countries. Economic Policy, 29(79), 395-446.
+  * 学校固定効果を推定した結果、その固定効果は学校施策や教員のteachingなどとの相関が強いことを報告している。
+
+* Bloom,   Nicholas,   Renata   Lemos,   Raffaella   Sadun,   and   John   Van   Reenen.   2015.   “Does   Management Matter in Schools?” Economic Journal125(584): 647–74
+
+教員を含んだ学校システムの中で重要な事実を記述しようとするサーベイ。
+  
+
+
+## その他
 * Can Principals Identify Effective Teachers? Evidence on Subjective Performance Evaluation
 上司による評価は本当に当てになるのか？
 
