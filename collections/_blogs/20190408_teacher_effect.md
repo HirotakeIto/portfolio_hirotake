@@ -1,51 +1,21 @@
 ---
-layout: default
-title: 教員の効果に関するサーベイ
+layout: blog
+title: 教員や学校の効果に関するサーベイ
 date_post: 20190408
 tags: survey
 ---
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  displayAlign: "center",
-  displayIndent: "2em",
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    processEscapes: true
-  },
-  CommonHTML: { matchFontHeight: false }
-});
-</script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
-
-# 教員の効果
+## 教員の効果
 教員が生徒の教育成果に持つ影響について考えた論文をまとめる。例によって論文読んだ時のメモとして残しており、校正などは一切おこなっていないことをご了承ください。
 
 
 <!-- ##### 回帰分析における説明割合
 https://stats.stackexchange.com/questions/203540/explaining-the-variance-of-a-regression-model -->
+## 教員の個人特性
+* Hanushek, E. A., & Rivkin, S. G. (2006). Teacher quality. Handbook of the Economics of Education, 2, 1051-1078.
+  * 教員の個人特性が子どもの教育成果に与える影響としてconsistentなものは発見されていない
 
-## 教授方法の影響
-* Algan, Yann, Pierre Cahuc, and Andrei Shleifer. 2013.   “Teaching   Practices   and   Social   Capital.”   American Economic Journal: Applied Economics 5(3): 189–210
-  <!-- * 何でこんないいジャーナルに載っているんだ？ -->
-  * 学校での指導方法が生徒の信念（協力への志向性みたいなもの）に影響をあたえる
-  * 基本的な推定はOLSに学校固定効果などを追加するだけのもの
-
-* Bietenbeck, J. (2014). Teaching practices and cognitive skills. Labour Economics, 30, 143-153.
-  * within-student between-subject approach
-
-* Hidalgo-Cabrillana, A., & Lopez-Mayan, C. (2018). Teaching styles and achievement: Student and teacher perspectives. Economics of Education Review, 67, 184-206.
-  * within-student between-subject approach 
-
-* Schwerdt, G., & Wuppermann, A. C. (2011). Is traditional teaching really all that bad? A within-student between-subject approach. Economics of Education Review, 30(2), 365-379.
-  * 
-
-* Van Klaveren, C. (2011). Lecturing style teaching and student performance. Economics of Education Review, 30(4), 729-739.
-  * 教員が教室の前で立って講義している時間と、パーソナルに教えている時間とどっちが有効かを比較。
-  * 教員が教室の前で立って講義している時間は特に学力に影響は与えなかった。
-  * within-student between-subject approach 
-
-## 教員免許など
+### 教員免許など
 教員の有効性と教員免許はどの様な関係にあるのだろうか。教員の質保証政策の一貫で教員免許の取得を厳しくすることなどが政策ターゲットになることなどがあるが、そもそも教員として資格を取得することが果たして教員としての質を高めるなんていうことはあるのか？
 
 * 小学校 Clotfelter,Ladd, and Vigdor 2006, 2007a, 2007b; Goldhaber and Anthony 2007; Rockoff 2004)
@@ -56,8 +26,72 @@ https://stats.stackexchange.com/questions/203540/explaining-the-variance-of-a-re
   * High Credentialsな先生はSESが高い生徒が集まる学校に配分されていて、不公平かも
   * これは単年度のデータしかないんだけど、科目間の生徒の固定効果をコントロールすることでcausal effectを取り出そうとしている。
 
-* Monazza Aslam∗, Geeta Kingdon
-教員固定効果
+
+## 教授方法の影響
+多くの研究で言われている流れとして、教員の履歴書上の特性は教育成果に対して重要ではなく、その一方て教授方法とかそのプロセスは非常に重要なのではないかということがある（Aslam & Kingdom、HanushekのTQ論文とか）。
+
+* Goldhaber, D. D., & Brewer, D. J. (1997). Why don't schools and teachers seem to matter? Assessing the impact of unobservables on educational productivity. Journal of Human Resources, 32(3), 505-524.
+
+* Jackson, C. K., & Bruegmann, E. (2009). Teaching students and teaching each other: The importance of peer learning for teachers. American Economic Journal: Applied Economics, 1(4), 85-108.
+
+* Schwerdt, G., & Wuppermann, A. C. (2011). Is traditional teaching really all that bad? A within-student between-subject approach. Economics of Education Review, 30(2), 365-379.
+  * time of lecture–style teachingの時間を増やすことで学力に良い影響
+  * 
+
+* Van Klaveren, C. (2011). Lecturing style teaching and student performance. Economics of Education Review, 30(4), 729-739.
+  * 教員が教室の前で立って講義している時間と、パーソナルに教えている時間とどっちが有効かを比較。
+  * 教員が教室の前で立って講義している時間は特に学力に影響は与えなかった。
+  * within-student between-subject approach 
+  * 気になる：<br>
+  "We can evaluate the selection bias due to unobserved teacher characteristics using the approach of Altonji, Elder, and Taber (2005). ""
+  * 気になる：<br>
+  ”Can measurement error explain the results?”
+  実際に変な回答によるバイアスの発生具合をシミュレーションによって分析（これもsignal extraction）.
+  * 効果がなかった論文だからなのか色々調べていて、その方法がいちいち興味深い。
+
+* Aslam, M., & Kingdon, G. (2011). What can teachers do to raise pupil achievement?. Economics of Education Review, 30(3), 559-574.
+  * within-student between-subject approach（と思われる）
+  * 教員のresume上の特徴はあまり影響ないけど、teaching processとかは教育成果に影響を与える。
+
+* Bietenbeck, J. (2014). Teaching practices and cognitive skills. Labour Economics, 30, 143-153.
+  * within-student between-subject approach
+
+* De Witte, K., & Van Klaveren, C. (2014). How are teachers teaching? A nonparametric approach. Education Economics, 22(1), 3-23.
+  * モダンティーチングが効果を持つ。
+  * DEAモデル（Data Envelopment Analysis)
+
+* Lavy, V. (2015). What makes an effective teacher? Quasi-experimental evidence. CESifo Economic Studies, 62(1), 88-125.
+  * traditional teaching style(the instilment of knowledge and comprehension)はgirl & LowSESの子供により強くpositiveな影響を持った
+  * modern teachingがサブグループことに大きさ異なるがpositiveな効果があった。
+  * なのでtraditional teachingとmodern teachingは共存して、どういう子供に対してそのデータを用いて行くかが重要
+  * The identification strategy I use in this paper is most closely related to that of Ammermueller and
+Pischke (2009), who use a school-fixed-effects framework to estimate peer effect based on within-school
+and across-class variation in peer ability. 
+  * Quasi-experimentalと言っているが、何がそれに値するのかよくわからん（普通のwithin school での分析に見える）
+
+* Algan, Yann, Pierre Cahuc, and Andrei Shleifer. 2013.   “Teaching Practices and Social Capital.”   American Economic Journal: Applied Economics 5(3): 189–210
+  <!-- * 何でこんないいジャーナルに載っているんだ？ -->
+  * 学校での指導方法が生徒の信念（協力への志向性みたいなもの）に影響をあたえる
+  * 基本的な推定はOLSに学校固定効果などを追加するだけのもの
+
+* Zakharov, A., Carnoy, M., & Loyalka, P. (2014). Which teaching practices improve student performance on high-stakes exams? Evidence from Russia. International Journal of Educational Development, 36, 13-21.
+  * 未読
+
+* Comi, S. L., Argentin, G., Gui, M., Origo, F., & Pagani, L. (2017). Is it the way they use it? Teachers, ICT and student achievement. Economics of Education Review, 56, 24-39.
+  * ICTを用いた教育実践の効果（ICT-related teaching practices）
+  * ICTの実践方法によって効果が異なり、結局のところ教員がうまくICTを利活用できることであったりすることが重要だろうという結論。
+  * within-student between-subject estimator
+
+* Hidalgo-Cabrillana, A., & Lopez-Mayan, C. (2018). Teaching styles and achievement: Student and teacher perspectives. Economics of Education Review, 67, 184-206.
+  * 教員と生徒両方の授業方法についての報告をしよう
+    * 教員が報告した授業方法：生徒の学力への影響はなし
+    * 生徒が報告した授業方法：modern teachingはpositiveな影響を持って、traditional teachingはnegative
+  * within-school approach <br>
+    （イントロより） <br> 
+    「子供の教育成果に対する授業方法の因果効果を得るのは難しい課題である。それは２つのセレクションに対処することを要求する。すなわち、学校間のsortingと学校内のsortingである。私たちの分析手法は学校内のクラス間の授業方法についての及びテストスコア変動を使って、ランダムに発生するとは言えないような生徒や教員の学校間のsortingに対処している。しかし、学校内でのsortingに対処するのは簡単ではない。授業の方法は科目というよりむしろクラスごとに違うものであり、そのため私たちは生徒内変動を用いることができない。またクラスごとに異なる先生（伊藤：原文にはtutorとあるが先生とは別？そんなわけないよね）がいるから、先生内のバリエーションを使うことも難しい。そのため私たちは学校内のsortingがどれくらい結果に対して問題になるかを評価するような分析をを行なった。私たちは学校内で教員のセレクションが発生している証拠を見つけることはできなかった。（省略）。しかし私たちは完全に観察不可能な異質性に対処できたとは言えず、結果的に推定値をcausalだとすることには慎重になる必要がある」
+
+<!--     Obtaining the causal effect of the teaching styles on student achievement is challenging. It requires dealing with two sources of selection: between–school sorting and within–school sorting. Our empirical strategy relies on the between–class within–school variation in teaching practices and test scores to account for the non–random selection of students and teachers between schools. Dealing with the within–school sorting however is not straightforward. Teaching practices vary at the class level rather than at the subject level and so we cannot rely on within–student variation. We cannot exploit either within–teacher variation since each class has a different tutor. Thus we conduct a thorough analysis to asses to what extent within–school sorting may be an issue for the results. We do not find evidence of within–school selection of teachers, students and teaching styles. Additionally we include a broad set of student and teacher variables in the specification in order to minimize the bias from potential unobserved traits. However, we cannot rule–out completely the presenceof unobserved variables, and consequently we refrain from interpretingour estimates as causal. -->
+
 
 ## 教員付加価値
 ### 教員付加価値を用いた教員効果の測定について
@@ -166,7 +200,6 @@ $$
 > The earliest studies by Hanushek and Murnane, as well as work by Nye et al. (2004), did not distinguish between classroom and teacher effects. This limitation is essentially what separates these early studies from more recent work, beginning with Rockoff (2004), Rivkin et al. (2005), and Aaronson et al. (2007). In nearly all studies in this literature, teacher effects are assumed to be fully persistent or fixed across classrooms. We discuss recent papers that relax this assumption below.
 
 ）
-
 * Kane, T. J., & Staiger, D. O. (2008). Estimating teacher impacts on student achievement: An experimental evaluation (No. w14607). National Bureau of Economic Research.
 
 * Lefgren, L., & Sims, D. (2012). Using subject test scores efficiently to predict teacher value-added. Educational Evaluation and Policy Analysis, 34(1), 109-121.
@@ -179,10 +212,18 @@ $$
   * 教員効果がcausalかどうかを考えるために実験を行なった。推定した教員効果を用いたVAを用いた予測がどれくらいforecast errorを出すかを検討することで、causalityを検証した
   * ほか、event studyなどを行なって、良い教員が入った学校や出て行った学校のテストスコアが落ちることなどを確認した。
 
+* Fleche, S. (2017). Teacher quality, test scores and non-cognitive skills: Evidence from primary school teachers in the UK.
+  * なんかわからんがこれも学力及び非認知能力両方への影響を見ている。
+
+* Jackson, C. K. (2012). Non-cognitive ability, test scores, and teacher quality: Evidence from 9th grade teachers in North Carolina (No. w18624). National Bureau of Economic Research.
+  * 非認知能力（absences, suspensions, grades, and on-time grade progression）に対する影響を見ている。
+  * その教員効果は長期的にもpositiveな影響（高校卒業、大学入学）を持っている。
+  * 特に英語教員の効果が重要（英語というか国語だよね、これは）
 
 * Jackson, C. K., Rockoff, J. E., & Staiger, D. O. (2014). Teacher effects and teacher-related policies. Annu. Rev. Econ., 6(1), 801-825.
+  * 良いサーベイ。
 
-良いサーベイ。
+* Jacob, B. A., & Lefgren, L. (2008). Can principals identify effective teachers? Evidence on subjective performance evaluation in education. Journal of labor Economics, 26(1), 101-136.
 
 
 ### 教員付加価値は教員の価値を表現し得ているのか？
@@ -232,6 +273,10 @@ chetty(2013, a)によれば教員付加価値に本質的な意味があるか�
 
 * Ammermueller,    Andreas,    and    Jörn-Steffen    Pischke. 2009.  “Peer  Effects  in  European  Primary  Schools:  Evidence  from  the  Progress  in  Interna-tional  Reading  Literacy  Study.”  Journal  of  Labor  Economics 27(3): 315–48.
 
+* Meyer, E., & Van Klaveren, C. (2013). The effectiveness of extended day programs: Evidence from a randomized field experiment in the Netherlands. Economics of Education Review, 36, 1-11.
+  * 授業時間を増やすことの影響を調査 → しかし効果はなかった模様
+  * フィールド実験
+
 * Freeman, R. B., & Viarengo, M. (2014). School and family effects on educational outcomes across countries. Economic Policy, 29(79), 395-446.
   * 学校固定効果を推定した結果、その固定効果は学校施策や教員のteachingなどとの相関が強いことを報告している。
 
@@ -241,12 +286,17 @@ chetty(2013, a)によれば教員付加価値に本質的な意味があるか�
   
 
 
+
 ## その他
 * Can Principals Identify Effective Teachers? Evidence on Subjective Performance Evaluation
-上司による評価は本当に当てになるのか？
+  * 上司による評価は本当に当てになるのか？
+
+* Cordero, J. M., Cristobal, V., & Santín, D. (2018). Causal inference on education policies: a survey of empirical studies using PISA, TIMSS and PIRLS. Journal of Economic Surveys, 32(3), 878-915.
+  * PISA, TIMSS and PIRLS に関する分析まとめ
 
 * 自分用メモ：
   * 戸田市の進学データとかを用いて、教員のその後の影響を調べる。
   * クラスルームエフェクトを推定するために、日本の中学校のデータを用いればいいんじゃないの？用は中学校の教員は複数箇所に配分されているんだから、、、\\
   → これで教員効果の年変動を計測できるのでは？ \\
   → サンプルが少なすぎる問題は複数科目を同時に打ち込むことで解決できるような。。。
+

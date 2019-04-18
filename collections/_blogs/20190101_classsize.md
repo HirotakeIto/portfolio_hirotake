@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: blog
 title: クラスサイズに関するサーベイ
 date_post: 20190101
 tags: survey
 ---
 
-# クラスサイズ研究のReview Review
+## クラスサイズ研究のReview Review
 ## クラスサイズ研究の昔の姿について Old-research
 そもそもクラスサイズに関する研究は相当昔まで遡ることができ、例えばそれは戦前にまで遡ることができる(JEPのサーベイに詳しい)。
 多くの地域•学校でクラスサイズに関するフィールド実験がなされ、その結果の多くはクラスサイズと成績との間には相関なしというものであった。この研究結果は当時のクラスサイズ政策に大きく影響を与え、クラスサイズ拡大の政策に寄与した。<br>
@@ -415,9 +415,10 @@ CSR(Class size reduction policy)は、実は内実にジレンマを孕みうる
     これはクラスサイズの働き方にいくつかメカニズムがあることを示唆している。(音の聞こえ方とか??)
     またこの非線型性はクラスサイズに関数クラス編成にも影響を与えるね。
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>  
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script>
   // tableにクラス追加
