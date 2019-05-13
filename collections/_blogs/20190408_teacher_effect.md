@@ -3,6 +3,7 @@ layout: blog
 title: 教員や学校の効果に関するサーベイ
 date_post: 20190408
 tags: survey
+hidden: false
 ---
 
 ## 教員の効果
@@ -14,6 +15,27 @@ https://stats.stackexchange.com/questions/203540/explaining-the-variance-of-a-re
 ## 教員の個人特性
 * Hanushek, E. A., & Rivkin, S. G. (2006). Teacher quality. Handbook of the Economics of Education, 2, 1051-1078.
   * 教員の個人特性が子どもの教育成果に与える影響としてconsistentなものは発見されていない
+
+* Chingos, M. M., & Peterson, P. E. (2011). It's easier to pick a good teacher than to train one: Familiar and new results on the correlates of teacher effectiveness. Economics of Education Review, 30(3), 449-465.
+
+* Goldhaber, D., Liddle, S., & Theobald, R. (2013). The gateway to the profession: Assessing teacher preparation programs based on student achievement. Economics of Education Review, 34, 29-44.
+
+
+### 経験年数
+* Harris, D. N., & Sass, T. R. (2011). Teacher training, teacher quality and student achievement. Journal of public economics, 95(7-8), 798-812.
+  * 経験年数
+  * 過去の調査のサーベイは綺麗で見やすい。彼によると2000年以降、パネルデータでstudentFEを採用した研究は８個ある。
+    モダンな小学校国語：多くの研究が有意と報告、小学校算数：有意も非有意もある、中学校国語：有意も非有意もある、中学校算数：多くが有意と報告。
+
+* Papay, J. P., & Kraft, M. A. (2015). Productivity returns to experience in the teacher labor market: Methodological challenges and new evidence on long-term career improvement. Journal of Public Economics, 130, 105-119.
+
+* Wiswall, M. (2013). The dynamics of teacher quality. Journal of Public Economics, 100, 61-78.
+  * "I find that for mathematics achievement there are high returns to later career teaching experience, about twice as much dispersion in initial teacher quality as previously estimated, and a pattern of negative selection where high quality teachers are more likely to exit."
+
+* Ost, B. (2014). How do teachers improve? The relative importance of specific and general human capital. American Economic Journal: Applied Economics, 6(2), 127-51.
+  * 教員のqualityがキャリアでどのように変容するか？それがgeneralなhuman capitalなのか、specific curriculum familiarityにすぎないかを識別して、specific experienceは直近の経験の方が昔の経験に比べてよっぽど高いことを示している。
+
+### 教員給与
 
 ### 教員免許など
 教員の有効性と教員免許はどの様な関係にあるのだろうか。教員の質保証政策の一貫で教員免許の取得を厳しくすることなどが政策ターゲットになることなどがあるが、そもそも教員として資格を取得することが果たして教員としての質を高めるなんていうことはあるのか？
@@ -95,9 +117,9 @@ and across-class variation in peer ability.
 
 ## 教員付加価値
 ### 教員付加価値を用いた教員効果の測定について
-教員の効果を測定する手法として、非常に頻繁に用いられるのは教員付加価値である。これは教育生産関数のインプットというより、むしろアウトプットを評価しているという点に注意しなくちゃいけない。一般に教員能力といえば子供の人的資本を促進するものだと考えるが、ここではその結果である。そのため、この教員効果がインプットにもなりうるという点は別で評価する必要がある。
+教員の効果を測定する手法として、非常に頻繁に用いられるのは教員付加価値である。これは教育生産関数のインプットというより、むしろアウトプットを評価しているという点に注意を払う必要がある。すなわち、一般に教員能力といえば子供の人的資本を促進するものだと考えるが、ここではその結果である。そのため、この教員効果がインプットにもなりうるという点は別で評価する必要がある(→教員付加価値のcausal impactを評価する一連の研究)。
 
-多くの場合教員効果を推定するときは、次の様なモデル化を行う（Jackson, Rockoff & Staiger(2014)に従っているが、文中での意図と数式が違うと思うで勝手に直している。）。
+多くの場合教員効果を推定するときは、次の様なモデル化を行う（Jackson, Rockoff & Staiger(2014)に従っているが、文中での意図と書かれている数式が違うと思うので勝手に直している。）。
 
 
 $$A _ { ijt } = \beta X _ { ijt } + \nu _ { ijt }  \quad where \quad \nu _ { ijt } = \theta _ { j } + \mu _ { jt } + \varepsilon _ { ijt }$$
@@ -109,9 +131,10 @@ iは生徒、jは教員、tは時間を指し、Aは教育成果、Xは生徒の
 ノイズを含む信号から真の情報を抽出する問題を一般にsingal extractionと言う。
 よく使う定理として次を挙げることができる。
 
-##### signal extraction theorem 
 
----
+##### signal extraction 定理を用いた教員付加価値の推定
+--- 
+**signal extraction 定理**\\
 $\theta$についてのpriorとして
 
   $$
@@ -205,7 +228,7 @@ $$
 * Lefgren, L., & Sims, D. (2012). Using subject test scores efficiently to predict teacher value-added. Educational Evaluation and Policy Analysis, 34(1), 109-121.
   個人的には一番丁寧かつ、subject別ではない取り出しみたいな取り組みをしていて面白かった。
 
-* Chetty R, Friedman JN, Rockoff JE. 2013a. Measuring the impacts of teachers I: evaluating bias in teacher value-added estimates. NBER Work. Pap. 19423
+* Chetty, R., Friedman, J. N., & Rockoff, J. E. (2014). Measuring the impacts of teachers I: Evaluating bias in teacher value-added estimates. American Economic Review, 104(9), 2593-2632.
   * 上記の定式化では教員効果を時間を通じて一定としていた。しかしそれはあまりに単純化にすぎるのではないか、ということで時間変動する教員効果を取り出している。教員効果がautocovarianceするような設定にして、直近のテストスコアが教員効果をより強く構成するようなモデルを組んだ。
   * 教員効果の1SDの上昇は0.14もの効果を持つ。
   > Our VA model implies that a 1 standard deviation (SD) improvement in teacher VA raises normalized test scores by approximately 0.14 SD in math and 0.1 SD in English, slightly larger than the estimates in prior studies which do not account for drift.
@@ -220,10 +243,15 @@ $$
   * その教員効果は長期的にもpositiveな影響（高校卒業、大学入学）を持っている。
   * 特に英語教員の効果が重要（英語というか国語だよね、これは）
 
+
+* Hanushek, E. A., & Rivkin, S. G. (2012). The distribution of teacher quality and implications for policy. Annu. Rev. Econ., 4(1), 131-157.
+  * サーベイ
 * Jackson, C. K., Rockoff, J. E., & Staiger, D. O. (2014). Teacher effects and teacher-related policies. Annu. Rev. Econ., 6(1), 801-825.
   * 良いサーベイ。
 
 * Jacob, B. A., & Lefgren, L. (2008). Can principals identify effective teachers? Evidence on subjective performance evaluation in education. Journal of labor Economics, 26(1), 101-136.
+
+* Carrell, S. E., & West, J. E. (2010). Does professor quality matter? Evidence from random assignment of students to professors. Journal of Political Economy, 118(3), 409-432.
 
 
 ### 教員付加価値は教員の価値を表現し得ているのか？
@@ -246,6 +274,10 @@ chetty(2013, a)によれば教員付加価値に本質的な意味があるか�
 * Corcoran 2010
 
 ## 学校の影響
+学校費は教育関連支出において大きなウェイトを占めるのにもかかわらず、コールマンレポートによって学校の支出は教育達成に影響を与えていないことを報告していらい、学校はどのように子供に影響を持っているかは重要な関心の対象になってきた。
+
+* The Failure of Input‐based Schooling Policies
+  "Hanushek (2003) reviews the more recent literature published on this question, and his conclusions echo those of Coleman et al. (1966) ."（Jackson）
 * Woessmann, L. (2016). The importance of school systems: Evidence from international differences in student achievement. Journal of Economic Perspectives, 30(3), 3-32.
   * 学校の影響について広範に見たサーベイ \\
     * 国際比較した時の教育生産関数を観察する。単純に推定した係数を見ている時と、国レベルに集計して説明割合(accounted variance)を観察して、家庭環境や学校制度の重要性を指摘する一方で、学校のリソースは重要ではないとしている \\
@@ -282,8 +314,16 @@ chetty(2013, a)によれば教員付加価値に本質的な意味があるか�
 
 * Bloom,   Nicholas,   Renata   Lemos,   Raffaella   Sadun,   and   John   Van   Reenen.   2015.   “Does   Management Matter in Schools?” Economic Journal125(584): 647–74
 
-教員を含んだ学校システムの中で重要な事実を記述しようとするサーベイ。
-  
+  * 教員を含んだ学校システムの中で重要な事実を記述しようとするサーベイ。
+
+### 学校の支出
+* The Effects of School Spending on Educational and Economic Outcomes: Evidence from School Finance Reforms 
+C. Kirabo Jackson  Rucker C. Johnson  Claudia Persico
+  * 裁判所による学校改革命令（SFR）を外生的なショックとして捉えて分析（何か予測してIVとして利用しているのかな）
+  * 学校支出増加が教育達成及び、将来的な労働市場での評価を改善していることを発見
+  * 同じSFRを使った研究だとCard and Payne (2002)： significant、Hoxby (2001)：mixed、Downes and Figlio（1998）：insiginificant、Guryan（2001）、Papke（2005）、Roy（2011）：significant in only a stateと効果のほどはvagueだったけど、この研究はかなり手法を洗練させていてしっかりした結果を出したということなのかな。
+  * メカニズムとして、ST比の改善と教員の給与の増加と支出の増加が関連あることを発見
+  * 学校支出の増加と、disadvantaged studentの増加は相関があった：ここをコントロールしていないから、過去の研究（コールマンレポート）とかは有意な関係性を発見できなかったのでは？
 
 
 

@@ -3,6 +3,7 @@ layout: blog
 title: pipenv導入
 date_post: 20190408
 tags: tech
+hidden: false
 ---
 
 # pipenv導入
@@ -15,8 +16,13 @@ tags: tech
 
 他参考になったページ
 
-* https://paiza.hatenablog.com/entry/2018/07/05/%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91%E3%81%91%E3%83%BBPython%E3%81%AE%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83venv%E3%81%A8Pipenv%E3%81%AB%E3%82%88%E3%82%8B%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8
-* https://qiita.com/miler0528/items/1926e93ed97979f8e9fa
+* 初心者向け・Pythonの仮想環境venvとPipenvによるパッケージ
+
+https://paiza.hatenablog.com/entry/2018/07/05/初心者向け・Pythonの仮想環境venvとPipenvによるパッケージ
+
+* pipenvでDjangoアプリをherokuにでデプロイしたので手順をメモ
+
+https://qiita.com/miler0528/items/1926e93ed97979f8e9fa
 
 
 ```
@@ -26,7 +32,11 @@ $ brew install pipenv
 ## Setup
 ```
 $ cd ./gmail_push
-$ pipenv --python 3.6.1
+$ pipenv --python 3.6.1 
+```
+or 
+```
+$ pipenv install --python 3.6.1
 ```
 しかしこれだとエラーを吐いた。
 ```console
@@ -65,3 +75,12 @@ pipenv install gunicorn==19.9.0 flask==1.0.2
 pipenv shell
 ```
 で仮想環境の中に入る。
+
+## pycharmへの追加
+https://qiita.com/nomunomu0504/items/a674a3d8cafd617f5319
+
+さ参考にしながらproject〜interpreterをpyenvのpython実行命令にしたり、python consoleのインタープリタをそれに合わせたりした。
+
+
+これだとpycharmでエラーが出たり。ipythonのバージョンの問題だった。
+https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000686170-Python-Console-crashes-on-startup-in-PyCharm
