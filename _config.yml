@@ -39,3 +39,5 @@ nav:
    link: /contact
  - name: "Memo"
    link: /memo
+
+theme: jekyll-theme-minimal
