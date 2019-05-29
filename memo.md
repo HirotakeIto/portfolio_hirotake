@@ -20,7 +20,9 @@ https://shopify.github.io/liquid/filters/uniq/
   <h4>{{tag}}</h4>
   {% for blog in site.blogs %}
     {% if blog.tags contains tag %}
+      {% if blog.hidden != true %}
 <span>&emsp;&emsp;</span><span>{{ blog.date_post }}</span><span>&emsp;</span><a href="{{ blog.url }}">{{ blog.title }}</a>
+      {% endif %}
     {% endif %}
   {% endfor %}
 {% endfor %}
