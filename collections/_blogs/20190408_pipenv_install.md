@@ -84,3 +84,8 @@ https://qiita.com/nomunomu0504/items/a674a3d8cafd617f5319
 
 これだとpycharmでエラーが出たり。ipythonのバージョンの問題だった。
 https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000686170-Python-Console-crashes-on-startup-in-PyCharm
+
+
+
+* Todo: これ見ながら描き方見直す
+https://www.kabuku.co.jp/developers/python-pipenv-graph
