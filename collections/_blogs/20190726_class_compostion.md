@@ -3,7 +3,7 @@ layout: blog
 title: クラス構成に関する研究
 date_post: 2019090726
 tags: survey education
-hidden: true
+hidden: false
 ---
 # クラス構成に関する研究
 ピアエフェクトの研究は非常に辛いものがある。しかし、ピアエフェクトそのものではなく、クラス構成に関する研究だったらもうちょっとなんとかなるのでは？
