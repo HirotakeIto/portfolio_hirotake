@@ -3,6 +3,7 @@ layout: blog
 title: クラスサイズに関するサーベイ
 date_post: 20190101
 tags: survey
+tocbot: true
 ---
 
 ## クラスサイズ研究のReview Review

@@ -21,6 +21,7 @@ MathJax.Hub.Config({
   <div class="blog content">{{ content }}</div>
 </div>
 
+{% if page.tocbot == true %}
 <script type="text/javascript">
 tocbot.init({
   // Where to render the table of contents.
@@ -57,3 +58,4 @@ tocbot.init({
   /*order: 1;*/
 }
 </style>
+{% endif %}
