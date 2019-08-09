@@ -3,7 +3,7 @@ layout: blog
 title: pipenv導入
 date_post: 20190408
 tags: tech
-hidden: false
+hidden: true
 ---
 
 # pipenv導入
