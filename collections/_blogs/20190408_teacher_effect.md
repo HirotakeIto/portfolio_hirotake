@@ -55,20 +55,58 @@ https://stats.stackexchange.com/questions/203540/explaining-the-variance-of-a-re
 * Goldhaber, D. D., & Brewer, D. J. (1997). Why don't schools and teachers seem to matter? Assessing the impact of unobservables on educational productivity. Journal of Human Resources, 32(3), 505-524.
 
 * Jackson, C. K., & Bruegmann, E. (2009). Teaching students and teaching each other: The importance of peer learning for teachers. American Economic Journal: Applied Economics, 1(4), 85-108.
+  * 生徒が自身の担任のピアの教員から受ける影響を推定
+
+  * リフレクションプロブレムの問題をどうやってクリアするか
+
+    * 使う変数は外生的に決まる変数
+
+    " To avoid the reflection problem (Charles F. Manski 1993), we use two measures of peer quality that are not determined by contact with peers: observable peer characteristics that change exogenously, such as experience and certification test scores; and unobservable peer quality based on teacher-specific, time-invariant, value-added estimates from pre-sample data."
+
+    まあこれはわかる。でもピアの定義にはいまだに内生性が残りうる。（後述するが）ある教員のピアの定義は、所属する学校の所属する学年の教員。つまりセレクションが発生しうるところとして、「学校」と「学年」がある。
+
+    （悩み）次にそのセレクションを除くための固定効果を考えるんだけど、ここをもっとシステマティックに出せないかな、、、と。今のところ職人的な気がする。うううむ。「ある学校に入るのは教員と学校のマッチング」だから、教員固定効果と学校固定効果を入れることがとりあえず必然って感じかな。そんでさらに、time-variant factorにも対応するために、後述の教員学校固定効果や学校年度効果に拡張するって感じかな。
+
+    * セルフセレクションの問題には教員学校固定効果で対処
+
+    "To ensure that we do not use changes in peer quality due to teacher self-selection, we identify the changes in the performance of a teacher's students that are correlated with changes in the composition of her peers within the same school by including teacher-school fixed effects."
+
+    "（私訳）教員のセルフセレクションによるピアの変動を用いないことを保証するため、教員学校固定効果を入れることによって同じ学校の中で教員ピアの変動と相関する生徒たちのパフォーマンスの変動を用いた。"
+    
+    うーん、セルフセレクションっていうのは「できれば（性質の良い）ピアの学校で教えたいと教員は思う」とかそういう話か？ともかく、ピアの変動は、教員の同じ学校の中でのre-assign、peerの（これは学校に関わらない）re-assignによってのみ起きるってことだな。
+
+    なんで教員固定効果だけじゃダメなんだろう、、、と考えたが、教員が自ら「良い」学校に転職すればピアも良くなるし生徒も良くなるという内生性が発生すると。
+
+    * 教員がランダムアサインではない可能性に対しては学校年度固定効果で対処
+
+    例えばハリケーンを学校が襲って、「良い」教員が学校から退出するとする。同時に子供のパフォーマンスも落ちるとする。こんなような関係があるかもしれないよね。他にも、学校が突然「良い」教員ばっか雇用し始めるとかね。そのため学校年度固定効果で対処。
+  
+    * 学校学年効果はコントロールできていない
+    
+    そのため「ある年に突然、ある学年に良い教員を集めた！」みたいなことが起きてたら、バイアス発生。でもそんなことがないのは検証済みだよ。
+
+  * ここでのピアの定義は同じ学校の同じ学年をピアの定義としている。これがかなり重要な想定で、普通に考えたらピアの影響なんて同じ学年だけではなく同じ学校の教員からも受けるはず。それにも関わらず（推定上の都合で）ピアの定義を狭めている。そのためここで分析されるピア効果は、実際のピア効果のlower boundであることに注意しよう。
+
+  * スピルオーバー効果は強いし、特に経験浅い教員だとよりよい同僚を持つことの効果は高いとさ。
 
 * Schwerdt, G., & Wuppermann, A. C. (2011). Is traditional teaching really all that bad? A within-student between-subject approach. Economics of Education Review, 30(2), 365-379.
   * time of lecture–style teachingの時間を増やすことで学力に良い影響
-  * 
+  * variation between subjectを学校固定効果含みで用いている（単年度データだからかな）
+  * time of lecture–style teachingが教員の観察不可能な要因とco-foundしているかもしれないから、ある程度の仮定の上で、そのbiasを算出（面白そうなので読みたいが、ちょっとと今は後回し.下記のKlaveren（2011)でも同じことやっているな。。。）
 
 * Van Klaveren, C. (2011). Lecturing style teaching and student performance. Economics of Education Review, 30(4), 729-739.
   * 教員が教室の前で立って講義している時間と、パーソナルに教えている時間とどっちが有効かを比較。
   * 教員が教室の前で立って講義している時間は特に学力に影響は与えなかった。
   * within-student between-subject approach 
-  * 気になる：<br>
-  "We can evaluate the selection bias due to unobserved teacher characteristics using the approach of Altonji, Elder, and Taber (2005). ""
-  * 気になる：<br>
-  ”Can measurement error explain the results?”
-  実際に変な回答によるバイアスの発生具合をシミュレーションによって分析（これもsignal extraction）.
+  * 気になる：
+
+    "We can evaluate the selection bias due to unobserved teacher characteristics using the approach of Altonji, Elder, and Taber (2005). ""
+
+  * 気になる：
+
+    ”Can measurement error explain the results?”
+    実際に変な回答によるバイアスの発生具合をシミュレーションによって分析（これもsignal extractionっぽい）.
+
   * 効果がなかった論文だからなのか色々調べていて、その方法がいちいち興味深い。
 
 * Aslam, M., & Kingdon, G. (2011). What can teachers do to raise pupil achievement?. Economics of Education Review, 30(3), 559-574.
@@ -76,6 +114,7 @@ https://stats.stackexchange.com/questions/203540/explaining-the-variance-of-a-re
   * 教員のresume上の特徴はあまり影響ないけど、teaching processとかは教育成果に影響を与える。
 
 * Bietenbeck, J. (2014). Teaching practices and cognitive skills. Labour Economics, 30, 143-153.
+
   * within-student between-subject approach
 
 * De Witte, K., & Van Klaveren, C. (2014). How are teachers teaching? A nonparametric approach. Education Economics, 22(1), 3-23.
@@ -111,6 +150,20 @@ and across-class variation in peer ability.
   * within-school approach <br>
     （イントロより） <br> 
     「子供の教育成果に対する授業方法の因果効果を得るのは難しい課題である。それは２つのセレクションに対処することを要求する。すなわち、学校間のsortingと学校内のsortingである。私たちの分析手法は学校内のクラス間の授業方法についての及びテストスコア変動を使って、ランダムに発生するとは言えないような生徒や教員の学校間のsortingに対処している。しかし、学校内でのsortingに対処するのは簡単ではない。授業の方法は科目というよりむしろクラスごとに違うものであり、そのため私たちは生徒内変動を用いることができない。またクラスごとに異なる先生（伊藤：原文にはtutorとあるが先生とは別？そんなわけないよね）がいるから、先生内のバリエーションを使うことも難しい。そのため私たちは学校内のsortingがどれくらい結果に対して問題になるかを評価するような分析をを行なった。私たちは学校内で教員のセレクションが発生している証拠を見つけることはできなかった。（省略）。しかし私たちは完全に観察不可能な異質性に対処できたとは言えず、結果的に推定値をcausalだとすることには慎重になる必要がある」
+
+  * 例えば次の様に行った後、within–school selectionがどの程度発生しているかを図ろうとしている。
+
+    "Even after controlling for the endogenous selection of students to schools, unobserved traits of the student (μics) and the teacher (ηcs) may additionally create within–school endogeneity issues and lead to a biased estimate of γ."
+    
+    この後”3.1. Within–school selection of students, teachers and teaching style”でその程度を測定していて、これは重要なので読んでおく。
+
+
+* Bessho, S. I., Noguchi, H., Kawamura, A., Tanaka, R., & Ushijima, K. (2019). Evaluating remedial education in elementary schools: Administrative data from a municipality in Japan. Japan and the World Economy, 50, 36-46.
+  * 傾向スコアマッチング
+
+* Tanaka, R., & Ishizaki, K. (2018). Do teaching practices matter for students’ academic achievement? A case of linguistic activity. Journal of the Japanese and International Economies, 50, 26-36.
+  * 学校固定効果
+
 
 <!--     Obtaining the causal effect of the teaching styles on student achievement is challenging. It requires dealing with two sources of selection: between–school sorting and within–school sorting. Our empirical strategy relies on the between–class within–school variation in teaching practices and test scores to account for the non–random selection of students and teachers between schools. Dealing with the within–school sorting however is not straightforward. Teaching practices vary at the class level rather than at the subject level and so we cannot rely on within–student variation. We cannot exploit either within–teacher variation since each class has a different tutor. Thus we conduct a thorough analysis to asses to what extent within–school sorting may be an issue for the results. We do not find evidence of within–school selection of teachers, students and teaching styles. Additionally we include a broad set of student and teacher variables in the specification in order to minimize the bias from potential unobserved traits. However, we cannot rule–out completely the presenceof unobserved variables, and consequently we refrain from interpretingour estimates as causal. -->
 
@@ -276,6 +329,12 @@ chetty(2013, a)によれば教員付加価値に本質的な意味があるか�
 ## 学校の影響
 学校費は教育関連支出において大きなウェイトを占めるのにもかかわらず、コールマンレポートによって学校の支出は教育達成に影響を与えていないことを報告していらい、学校はどのように子供に影響を持っているかは重要な関心の対象になってきた。
 
+* Assessing the Variance in Pupil Attainment: How Important is the School Attended?
+David Wilkinson, Alex Bryson, Lucy Stokes
+
+  学校の重要性の報告
+
+
 * The Failure of Input‐based Schooling Policies
   "Hanushek (2003) reviews the more recent literature published on this question, and his conclusions echo those of Coleman et al. (1966) ."（Jackson）
 * Woessmann, L. (2016). The importance of school systems: Evidence from international differences in student achievement. Journal of Economic Perspectives, 30(3), 3-32.
@@ -333,6 +392,8 @@ C. Kirabo Jackson  Rucker C. Johnson  Claudia Persico
 
 * Cordero, J. M., Cristobal, V., & Santín, D. (2018). Causal inference on education policies: a survey of empirical studies using PISA, TIMSS and PIRLS. Journal of Economic Surveys, 32(3), 878-915.
   * PISA, TIMSS and PIRLS に関する分析まとめ
+
+* Gilpin, G., & Kaganovich, M. (2012). The quantity and quality of teachers: Dynamics of the trade-off. Journal of Public Economics, 96(3-4), 417-429.
 
 * 自分用メモ：
   * 戸田市の進学データとかを用いて、教員のその後の影響を調べる。
