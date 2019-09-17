@@ -79,7 +79,7 @@ pipenv shell
 ## pycharmへの追加
 https://qiita.com/nomunomu0504/items/a674a3d8cafd617f5319
 
-さ参考にしながらproject〜interpreterをpyenvのpython実行命令にしたり、python consoleのインタープリタをそれに合わせたりした。
+を参考にしながらproject〜interpreterをpyenvのpython実行命令にしたり、python consoleのインタープリタをそれに合わせたりした。
 
 
 これだとpycharmでエラーが出たり。ipythonのバージョンの問題だった。
@@ -89,3 +89,21 @@ https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000686170-Pyt
 
 * Todo: これ見ながら描き方見直す
 https://www.kabuku.co.jp/developers/python-pipenv-graph
+
+
+## トラブルシューティング
+### python3がつかえない
+上記プロセスをubuntuで実施したところ、python3のinstallができないかった。
+調べたら以下のissueで既出の問題であった
+
+* [Broken with Python 3 and Ubuntu 18.04](https://github.com/pypa/pipenv/issues/2922)
+
+これに書いてある通り、'python3-distutils'を導入した。
+'''
+$sudo apt-get install python3-distutils
+'''
+ただし、この時に
+> [dpkg: error: dpkg frontend is locked by another process]
+というエラーがでたので対応が必要だった。次のサイトを参考に対応した。
+
+* [リンク](https://bistro.site/?p=1403)

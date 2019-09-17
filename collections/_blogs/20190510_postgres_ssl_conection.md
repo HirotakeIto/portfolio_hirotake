@@ -75,3 +75,12 @@ logout
 /usr/share/doc/postgresql96-9.6.11/html/storage-init.html
 /usr/share/doc/postgresql96-9.6.11/html/trigger-definition.html
 [ec2-user@ip-172-31-37-103 ~]$ 
+
+
+# 問題4
+なんか適当にインストールすると、パスワードがないユーザーを作ってしまってログインできなくなったりする。
+対応方法として'postgres'ユーザーでbashにログインして、ユーザーにパスワードを付与するという方法がある。
+
+* [peer認証の関係でpsqlログインできない時の対処法](https://qiita.com/tomlla/items/9fa2feab1b9bd8749584)
+
+このサイトを参考に作業をしたが、要は'$ su - postgres'でログインして、あれこれ作業するというもの
